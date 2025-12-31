@@ -1,0 +1,386 @@
+.reparateur-payments-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.payments-header {
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.payments-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.payments-header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Cartes résumé (Dashboard) */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+}
+
+.card-revenu .card-value {
+  color: #667eea;
+}
+
+.card-appareils .card-value {
+  color: #48bb78;
+}
+
+.card-paye .card-value {
+  color: #38a169;
+}
+
+.card-attente .card-value {
+  color: #ed8936;
+}
+
+.card-attente.has-pending .card-value.pending-amount {
+  color: #ed8936;
+  font-weight: 700;
+}
+
+.card-attente.no-pending {
+  background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+}
+
+.card-attente.no-pending .card-value.no-pending-amount {
+  color: #22543d;
+}
+
+.card-hint {
+  font-size: 0.85rem;
+  color: #22543d;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Filtres et recherche */
+.payments-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.filter-select {
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.filter-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.search-box {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+  z-index: 1;
+  color: #666;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Tableau */
+.payments-table-wrapper {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.payments-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.payments-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payments-table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.payments-table tbody tr:hover {
+  background: #f7fafc;
+  transform: scale(1.01);
+}
+
+.payments-table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.client-cell {
+  min-width: 150px;
+}
+
+.client-name {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.ticket-code-small {
+  font-size: 0.85rem;
+  color: #718096;
+  font-family: 'Courier New', monospace;
+}
+
+.appareil-type {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background: #edf2f7;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.amount-cell {
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.amount-cell strong {
+  color: #1a202c;
+}
+
+.amount-cell.highlight {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.amount-cell.highlight strong {
+  color: #667eea;
+}
+
+.percentage-cell {
+  font-weight: 600;
+  color: #48bb78;
+}
+
+/* Badges de statut */
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.status-paid {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.status-unpaid {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.status-badge.status-pending {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+/* État vide */
+.no-data {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+}
+
+.no-data-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-data h3 {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin: 0 0 0.5rem 0;
+}
+
+.no-data p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Accès refusé */
+.no-access {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-access h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+}
+
+.no-access p {
+  font-size: 1.1rem;
+  color: #718096;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reparateur-payments-container {
+    padding: 1rem;
+  }
+
+  .payments-header h1 {
+    font-size: 2rem;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .payments-filters {
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+
+  .payments-table-wrapper {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .payments-table {
+    font-size: 0.85rem;
+  }
+
+  .payments-table th,
+  .payments-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .payments-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
