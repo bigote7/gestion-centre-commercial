@@ -43,9 +43,13 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm test -- --watch=false --passWithNoTests
+        run: npm test -- --watch=false --passWithNoTests --ci
         continue-on-error: true
+        env:
+          CI: true
 
       - name: Build
         run: npm run build
+        env:
+          CI: true
 
